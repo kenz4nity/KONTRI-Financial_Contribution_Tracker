@@ -104,7 +104,7 @@ While Kontri is currently an offline powerhouse, the next evolution of the app w
 
 Don't want to build it from source? You can download the latest Android release directly to test the features!
 
-👉 **[Download the latest Kontri APK via Google Drive](https://drive.google.com/drive/folders/1ML-N9TngdjvYb-jifTTa4hKayb401MhV?usp=sharing)**
+👉 **[Download Kontri v1.1.0 (Android APK) via Google Drive](https://drive.google.com/drive/folders/1ML-N9TngdjvYb-jifTTa4hKayb401MhV?usp=sharing)**
 
 *Note: You may need to enable "Install from Unknown Sources" in your Android settings to install the app directly from the downloaded file.*
 
