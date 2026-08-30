@@ -1,4 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Proof of payment: photographing a receipt. Gallery picking needs no
+         permission on Android 13+, which uses the system photo picker. -->
+    <uses-permission android:name="android.permission.CAMERA"/>
     <application
         android:label="Kontri"
         android:name="${applicationName}"

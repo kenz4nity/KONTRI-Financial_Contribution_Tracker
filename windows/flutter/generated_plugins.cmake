@@ -3,7 +3,9 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
-  isar_flutter_libs
+  file_selector_windows
+  isar_community_flutter_libs
+  printing
 )
 
 list(APPEND FLUTTER_FFI_PLUGIN_LIST

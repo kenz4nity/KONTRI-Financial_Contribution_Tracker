@@ -1,7 +1,7 @@
 name: kontri
 description: "A financial contribution tracker app."
 publish_to: 'none'
-version: 0.1.0+1
+version: 1.1.0+2
 
 environment:
   sdk: ^3.12.2
@@ -10,23 +10,34 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.8
-  isar: ^3.1.0+1
-  isar_flutter_libs: ^3.1.0+1
+  # Maintained community fork of Isar 3. Same engine and same on-disk format as
+  # `isar` 3.1.0+1, but it builds against modern analyzer/Dart and supports
+  # Android 16 KB page sizes. Do not switch back — the old generator cannot run
+  # on Dart 3.12.
+  isar_community: ^3.3.2
+  isar_community_flutter_libs: ^3.3.2
   path_provider: ^2.1.2
   device_calendar: ^4.3.3
   intl: ^0.19.0
   timezone: ^0.9.4
+  image_picker: ^1.2.3
+  pdf: ^3.13.0
+  printing: ^5.15.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  build_runner: any       
-  isar_generator: ^3.1.0+1
+  build_runner: any
+  isar_community_generator: ^3.3.2
   flutter_launcher_icons: ^0.13.1
   flutter_lints: ^4.0.0
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/logo.png
+    - assets/fonts/NotoSans-Regular.ttf
+    - assets/fonts/NotoSans-Bold.ttf
 
 flutter_launcher_icons:
   android: true
