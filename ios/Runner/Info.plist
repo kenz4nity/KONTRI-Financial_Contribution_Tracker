@@ -66,5 +66,10 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Kontri uses the camera so you can photograph a receipt as proof of payment.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Kontri needs access to your photos so you can attach a screenshot as proof of payment.</string>
 </dict>
 </plist>
+

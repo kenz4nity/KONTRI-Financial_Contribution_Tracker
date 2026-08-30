@@ -6,7 +6,11 @@ plugins {
 
 android {
     namespace = "com.example.kontri_financial_contribution_tracker"
-    compileSdk = 35
+    // 36 is required by the AndroidX libraries that image_picker and printing
+    // pull in. compileSdk only controls which APIs can be compiled against;
+    // targetSdk below still governs runtime behaviour, so this is not a
+    // behavioural change for existing users.
+    compileSdk = 36
     ndkVersion = flutter.ndkVersion
 
     compileOptions {

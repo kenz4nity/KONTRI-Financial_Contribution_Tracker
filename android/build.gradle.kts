@@ -24,8 +24,12 @@ subprojects {
                 if (androidExt.namespace == null) {
                     androidExt.namespace = project.group.toString()
                 }
-                // 2. Force older packages to compile at SDK 35
-                androidExt.compileSdkVersion(35)
+                // 2. Force every module (including :app) to one compileSdk.
+                // Raised to 36 in v1.1: the AndroidX libraries pulled in by
+                // image_picker and printing refuse to compile below it. This
+                // runs in afterEvaluate, so it overrides app/build.gradle.kts
+                // -- keep the two values in step.
+                androidExt.compileSdkVersion(36)
             }
         }
     }
