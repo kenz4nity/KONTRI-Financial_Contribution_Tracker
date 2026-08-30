@@ -44,8 +44,7 @@ abstract final class PdfReport {
     bool includeProofs = false,
   }) async {
     // Helvetica, the pdf package's built-in face, has no glyph for the peso
-    // sign and would render every amount with a blank box. Noto Sans is
-    // bundled specifically to carry U+20B1.
+    // sign and would render every amount with a blank box.
     final regular =
         pw.Font.ttf(await rootBundle.load('assets/fonts/NotoSans-Regular.ttf'));
     final bold =

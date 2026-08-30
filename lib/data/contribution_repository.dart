@@ -116,8 +116,7 @@ class ContributionRepository {
 
   final Isar isar;
 
-  /// The even split. v1.0 inlined this formula in three separate places that
-  /// could drift apart; this is now the single definition.
+  /// The even split.
   static double splitAmount(double budget, int participantCount) =>
       participantCount <= 0 ? 0 : budget / participantCount;
 
@@ -232,7 +231,7 @@ class ContributionRepository {
     );
   }
 
-  // ---------------------------------------------------------------- writes
+  // writes.
 
   /// Creates or updates a plan, re-splitting the budget across existing
   /// participants in the *same* transaction so a failure cannot leave shares

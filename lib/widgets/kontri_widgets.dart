@@ -5,9 +5,6 @@ import 'package:intl/intl.dart';
 import '../theme/app_theme.dart';
 
 /// Standard bottom-sheet chrome: grabber, rounded-28 surface, keyboard inset.
-///
-/// v1.0 copy-pasted this three times; three more sheets ship in v1.1, so it is
-/// a widget now.
 class KontriSheet extends StatelessWidget {
   const KontriSheet({super.key, required this.child, this.title});
 
@@ -214,10 +211,6 @@ class KontriDateField extends StatelessWidget {
 }
 
 /// iOS wheel date picker in a bottom sheet.
-///
-/// [minimumDate] is a parameter rather than a hardcoded `DateTime.now()`: a
-/// plan's start date is usually in the past, and v1.0's fixed floor made such
-/// a date impossible to pick.
 Future<DateTime?> pickKontriDate(
   BuildContext context, {
   required DateTime initial,
@@ -350,7 +343,7 @@ class GradientHeroCard extends StatelessWidget {
   }
 }
 
-/// Small tinted badge, e.g. the arrears chip on a hero card.
+/// Small tinted badge
 class StatPill extends StatelessWidget {
   const StatPill({
     super.key,

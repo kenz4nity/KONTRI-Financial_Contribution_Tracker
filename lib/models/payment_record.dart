@@ -2,8 +2,6 @@ import 'package:isar_community/isar.dart';
 
 part 'payment_record.g.dart';
 
-/// A single contribution, replacing v1.0's formatted-string payment log.
-///
 /// Structured so the PDF report, the proof attachments and the ledger UI all
 /// read the same rows. `Participant.amountPaid` remains the authoritative
 /// running total; these records are the itemisation of it.

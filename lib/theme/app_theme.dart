@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-/// Philippine peso formatting, used everywhere an amount is shown.
+/// Philippine peso formatting.
 final NumberFormat kCurrency =
     NumberFormat.currency(locale: 'en_PH', symbol: '\u20B1', decimalDigits: 2);
 
@@ -17,8 +17,7 @@ String formatCompact(double amount) {
   return kCurrency.format(amount);
 }
 
-/// Semantic colours. Kept apart from the [ColorScheme] because these carry
-/// meaning the Material roles have no slot for.
+/// Semantic colours. 
 abstract final class KontriColors {
   static const blue = Color(0xFF0A84FF);
   static const green = Color(0xFF34C759);
@@ -48,15 +47,14 @@ abstract final class KontriColors {
   ];
 }
 
-/// Stable per-name accent colour, so a participant keeps the same colour
-/// across screens and launches.
+/// Stable per-name accent colour.
 Color colorForName(String name) {
   if (name.isEmpty) return KontriColors.avatarPalette.first;
   final sum = name.codeUnits.fold<int>(0, (a, b) => a + b);
   return KontriColors.avatarPalette[sum % KontriColors.avatarPalette.length];
 }
 
-/// Corner radii used across the app, matching the v1.0 visual language.
+/// Corner radii used across the app.
 abstract final class KontriRadius {
   static const sheet = 28.0;
   static const card = 20.0;
@@ -75,7 +73,6 @@ abstract final class KontriSpace {
   static const fabClearance = 110.0;
 }
 
-/// Named type scale, replacing ~14 inline size/weight pairs.
 /// Colour is applied at the call site from the active [ColorScheme].
 abstract final class KontriText {
   static const screenTitle =

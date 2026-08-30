@@ -5,13 +5,6 @@ import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart';
 
 /// Stores payment-proof images inside the app's documents directory.
-///
-/// Only the bare filename is ever persisted to the database. On iOS the app
-/// container UUID changes on every install and update, so an absolute path
-/// stored today is dead after exactly the kind of upgrade this feature ships
-/// in. The directory is resolved once at launch by [init] and joined to the
-/// filename on demand, which also keeps `pathFor` synchronous so widgets can
-/// call it inside `build`.
 abstract final class ProofStorage {
   static const _dirName = 'kontri_proofs';
   static late final Directory _dir;

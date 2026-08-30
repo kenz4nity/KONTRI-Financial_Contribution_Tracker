@@ -12,11 +12,10 @@ Future<void> main() async {
 
   tzdata.initializeTimeZones();
 
-  // Resolve the proof directory before the first frame so widgets can build
-  // image paths synchronously.
+  // Resolve the proof directory before the first frame so widgets can build image paths synchronously.
   await ProofStorage.init();
 
-  // Opens the existing database in place and applies the v1.1 backfill.
+  // Opens the existing database in place.
   final isar = await IsarService.open();
 
   runApp(KontriApp(repository: ContributionRepository(isar)));

@@ -7,9 +7,6 @@ import '../theme/app_theme.dart';
 
 /// Live "what will this actually cost" preview for a whole plan, shown in the
 /// New/Edit Plan sheet before any participants exist.
-///
-/// Answers the question the budget field alone cannot: 10,000 over one month is
-/// 2,500 a week.
 class PacePreviewCard extends StatelessWidget {
   const PacePreviewCard({
     super.key,

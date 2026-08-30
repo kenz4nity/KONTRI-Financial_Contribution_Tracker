@@ -1,8 +1,6 @@
 /// Pure contribution-schedule math: how much is due each period, how much
 /// *should* have been paid by now, and how far behind that leaves someone.
-///
-/// Deliberately free of Flutter and Isar imports so it can be unit-tested
-/// directly — this file is load-bearing for money.
+
 library;
 
 import 'dart:math' as math;
